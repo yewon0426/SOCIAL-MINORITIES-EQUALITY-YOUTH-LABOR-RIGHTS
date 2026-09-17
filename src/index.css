@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+@theme {
+  --font-editorial: 'Cormorant Garamond', 'Nanum Myeongjo', Georgia, serif;
+  --font-serif: 'Cormorant Garamond', 'Nanum Myeongjo', Georgia, serif;
+  --font-myeongjo: 'Nanum Myeongjo', 'Batang', 'Noto Serif KR', serif;
+  --font-sans: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Global Korean Typography & Readability Defaults */
+body {
+  font-family: var(--font-sans);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  line-height: 1.8;
+  color: #1C1917;
+}
+
+/* ==========================================================================
+   RIGHTS FILE UNIFIED TYPOGRAPHY SYSTEM
+   Rule 1: "보여주는 문장 = Serif" (Editorial / Display / Quotes)
+   Rule 2: "읽고 이해해야 하는 문장 = Sans-serif" (Learning / Body / UI / Questions)
+   ========================================================================== */
+
+/* 1. EDITORIAL SERIF (잡지의 개성과 에디토리얼 분위기) */
+.font-editorial {
+  font-family: var(--font-editorial);
+}
+
+.editorial-display {
+  font-family: var(--font-editorial);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.chapter-title {
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.4;
+  color: #1C1917;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 640px) {
+  .chapter-title {
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+.editorial-quote {
+  font-family: var(--font-editorial);
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.6;
+  font-style: italic;
+  color: #1C1917;
+}
+@media (min-width: 640px) {
+  .editorial-quote {
+    font-size: 1.875rem; /* 30px */
+  }
+}
+
+/* 2. LEARNING SANS-SERIF (학생이 실제로 읽고 판단해야 하는 정보) */
+.font-sans-learning {
+  font-family: var(--font-sans);
+}
+
+/* Primary Korean learning body text (16~17px, line-height 1.8) */
+.learning-body {
+  font-family: var(--font-sans);
+  font-size: 1rem; /* 16px */
+  line-height: 1.8;
+  color: #292524;
+  font-weight: 400;
+  word-break: keep-all;
+}
+@media (min-width: 640px) {
+  .learning-body {
+    font-size: 1.03125rem; /* 16.5px */
+    line-height: 1.85;
+  }
+}
+
+/* Secondary explanations / helpers / tips (14~15px) */
+.learning-secondary {
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.7;
+  color: #57534E;
+  font-weight: 400;
+  word-break: keep-all;
+}
+@media (min-width: 640px) {
+  .learning-secondary {
+    font-size: 0.9375rem; /* 15px */
+  }
+}
+
+/* Card descriptions / choice texts (14~15px, never below 13px) */
+.learning-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.7;
+  color: #44403C;
+  font-weight: 400;
+  word-break: keep-all;
+}
+@media (min-width: 640px) {
+  .learning-card-desc {
+    font-size: 0.9375rem; /* 15px */
+  }
+}
+
+/* Core Question sentence (18~20px, Sans-serif Semibold, wine color, no heavy italic on Korean) */
+.learning-question {
+  font-family: var(--font-sans);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.65;
+  font-weight: 600;
+  color: #881337;
+  font-style: normal;
+  word-break: keep-all;
+}
+@media (min-width: 640px) {
+  .learning-question {
+    font-size: 1.25rem; /* 20px */
+  }
+}
+
+/* Button typography: 14~15px Semibold */
+.learning-btn {
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+@media (min-width: 640px) {
+  .learning-btn {
+    font-size: 0.9375rem; /* 15px */
+  }
+}
+
+/* Editorial Labels (SCENE 01, CASE ANALYSIS, MARK THE EVIDENCE, etc.) */
+.editorial-label {
+  font-family: var(--font-sans);
+  font-size: 0.75rem; /* 12px */
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Metadata & subtle badges (11~12px) */
+.editorial-meta {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem; /* 11px */
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Reading container constraint for optimal Korean reading cadence */
+.reading-text {
+  max-width: 68ch;
+  line-height: 1.85;
+}
+
+/* Custom Editorial Elements */
+.paper-texture {
+  background-color: #FBF9F5;
+  background-image: radial-gradient(#E8E4D9 0.65px, transparent 0.65px);
+  background-size: 20px 20px;
+}
+
+.highlighter-yellow {
+  background: linear-gradient(104deg, rgba(254, 240, 138, 0) 0.5%, rgba(254, 240, 138, 0.9) 2%, rgba(254, 240, 138, 0.8) 95%, rgba(254, 240, 138, 0) 99%);
+  padding: 2px 6px;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.highlighter-rose {
+  background: linear-gradient(104deg, rgba(254, 205, 211, 0) 0.5%, rgba(254, 205, 211, 0.85) 2%, rgba(254, 205, 211, 0.8) 95%, rgba(254, 205, 211, 0) 99%);
+  padding: 2px 6px;
+  border-radius: 2px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.red-pen-underline {
+  text-decoration: underline;
+  text-decoration-color: #B91C1C;
+  text-decoration-thickness: 2.5px;
+  text-underline-offset: 4px;
+}
+
+.red-pen-circle {
+  border: 1.5px solid #DC2626;
+  border-radius: 9999px;
+  padding: 1px 8px;
+}
+
+.stamp-box {
+  border: 1.5px solid #881337;
+  color: #881337;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+}
+
+/* Print / Export optimization */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

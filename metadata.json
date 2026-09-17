@@ -1,0 +1,6 @@
+{
+  "name": "RIGHTS FILE: 우리가 당연하게 지나친 권리의 장면들",
+  "description": "고등학교 1학년 통합사회2 방과후 수업용 디지털 에디토리얼 시사 매거진 — 사회적 소수자, 평등, 청소년 노동권, 노동 3권과 실질적 인권 보장",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
