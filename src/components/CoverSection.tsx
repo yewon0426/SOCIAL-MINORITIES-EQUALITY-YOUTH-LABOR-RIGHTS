@@ -60,17 +60,17 @@ export const CoverSection: React.FC<CoverSectionProps> = ({
           </h1>
 
           <div className="pt-2">
-            <p className="text-xl sm:text-2xl md:text-3xl font-serif text-[#292524] tracking-normal">
+            <p className="editorial-heading text-[#292524] tracking-normal">
               「우리가 당연하게 지나친 권리의 장면들」
             </p>
           </div>
 
           {/* Subtitle Subjects */}
           <div className="pt-6 max-w-xl mx-auto border-t border-[#292524]/15">
-            <p className="font-mono text-xs sm:text-sm tracking-[0.25em] text-[#57534E] uppercase font-medium">
+            <p className="editorial-label text-xs sm:text-sm tracking-[0.25em] text-[#57534E] uppercase">
               SOCIAL MINORITIES · EQUALITY · YOUTH LABOR RIGHTS
             </p>
-            <p className="text-xs text-[#78716C] mt-2 font-mono">
+            <p className="editorial-meta text-xs text-[#78716C] mt-2">
               ISSUE 01 / 2026 EDITION · HIGH SCHOOL SOCIAL STUDIES
             </p>
           </div>
@@ -79,38 +79,38 @@ export const CoverSection: React.FC<CoverSectionProps> = ({
 
       {/* Centerpiece: Today's Questions */}
       <div className="max-w-3xl mx-auto w-full my-12 bg-white/90 border border-[#292524]/20 p-6 sm:p-8 shadow-xs relative">
-        <div className="absolute -top-3.5 left-6 bg-[#1C1917] text-[#FBF9F5] px-3 py-0.5 font-mono text-[11px] tracking-widest uppercase font-semibold">
+        <div className="absolute -top-3.5 left-6 bg-[#1C1917] text-[#FBF9F5] px-3 py-0.5 editorial-label text-[11px] tracking-widest uppercase">
           TODAY'S QUESTIONS
         </div>
 
         <div className="space-y-4 pt-2">
           <div className="flex items-start gap-4">
-            <span className="font-serif italic font-bold text-lg text-[#881337]">Q1.</span>
-            <p className="font-serif text-base sm:text-lg text-[#1C1917] leading-relaxed">
+            <span className="font-mono font-bold text-lg text-[#881337] shrink-0">Q1.</span>
+            <p className="learning-question text-base sm:text-lg text-[#1C1917] leading-relaxed font-semibold">
               “같은 대우는 언제나 공정할까?”
             </p>
           </div>
           <div className="h-[1px] bg-[#292524]/10" />
           <div className="flex items-start gap-4">
-            <span className="font-serif italic font-bold text-lg text-[#881337]">Q2.</span>
-            <p className="font-serif text-base sm:text-lg text-[#1C1917] leading-relaxed">
+            <span className="font-mono font-bold text-lg text-[#881337] shrink-0">Q2.</span>
+            <p className="learning-question text-base sm:text-lg text-[#1C1917] leading-relaxed font-semibold">
               “계약에 동의했다면 모든 근로조건은 정당할까?”
             </p>
           </div>
           <div className="h-[1px] bg-[#292524]/10" />
           <div className="flex items-start gap-4">
-            <span className="font-serif italic font-bold text-lg text-[#881337]">Q3.</span>
-            <p className="font-serif text-base sm:text-lg text-[#1C1917] leading-relaxed">
+            <span className="font-mono font-bold text-lg text-[#881337] shrink-0">Q3.</span>
+            <p className="learning-question text-base sm:text-lg text-[#1C1917] leading-relaxed font-semibold">
               “권리를 가지고 있다는 것과 그 권리를 실제로 행사할 수 있다는 것은 같을까?”
             </p>
           </div>
         </div>
 
         <div className="mt-6 pt-4 border-t border-dashed border-[#292524]/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs text-[#57534E]">
-          <p className="italic">
+          <p className="learning-instruction text-xs sm:text-[13px]">
             * 퀴즈나 점수가 없습니다. 기사를 읽고, 단서를 찾아 표시하며, 개념을 스스로 연결합니다.
           </p>
-          <span className="font-mono text-[11px] text-[#881337] font-semibold">
+          <span className="editorial-label text-[11px] text-[#881337]">
             READ · MARK · CONNECT · RECORD
           </span>
         </div>

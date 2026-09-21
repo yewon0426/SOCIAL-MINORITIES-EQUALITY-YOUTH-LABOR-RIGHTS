@@ -30,15 +30,15 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
             className="text-left group cursor-pointer"
           >
             <div className="flex items-center gap-2">
-              <span className="text-[10px] tracking-[0.2em] font-semibold text-[#881337] uppercase font-mono">
+              <span className="editorial-label text-[10px] text-[#881337]">
                 ISSUE 01 / 2026
               </span>
               <span className="hidden sm:inline-block w-1 h-1 rounded-full bg-[#292524]/40" />
-              <span className="hidden sm:inline-block text-[11px] tracking-wider text-[#57534E]">
+              <span className="hidden sm:inline-block editorial-meta text-[11px] text-[#57534E]">
                 통합사회2 AFTER CLASS
               </span>
             </div>
-            <div className="text-xl sm:text-2xl font-serif font-bold tracking-tight text-[#1C1917] group-hover:text-[#881337] transition-colors leading-none mt-0.5">
+            <div className="editorial-subheading text-xl sm:text-2xl text-[#1C1917] group-hover:text-[#881337] transition-colors leading-none mt-0.5">
               RIGHTS <span className="italic font-normal">FILE</span>
             </div>
           </button>
@@ -57,7 +57,7 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
                     onSelectIssue(item.id as IssueId);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className={`px-2.5 py-1 text-xs font-mono transition-all cursor-pointer ${
+                  className={`px-2.5 py-1 text-xs editorial-meta transition-all cursor-pointer ${
                     isActive
                       ? 'bg-[#1C1917] text-[#FBF9F5] font-medium'
                       : 'text-[#57534E] hover:text-[#1C1917] hover:bg-[#E7E3D8]/60'
@@ -76,7 +76,7 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
               onSelectIssue('my-edition');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className={`flex items-center gap-1.5 px-3 py-1.5 text-xs font-serif font-bold uppercase tracking-wider transition-all cursor-pointer ${
+            className={`learning-btn flex items-center gap-1.5 px-3 py-1.5 text-xs transition-all cursor-pointer ${
               activeIssue === 'my-edition'
                 ? 'bg-[#881337] text-white'
                 : 'border border-[#881337] text-[#881337] hover:bg-[#881337]/10'
@@ -91,11 +91,11 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
           <button
             id="nav-toc-toggle-btn"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium border border-[#292524]/20 hover:bg-[#E7E3D8]/50 text-[#1C1917] cursor-pointer"
+            className="editorial-meta flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium border border-[#292524]/20 hover:bg-[#E7E3D8]/50 text-[#1C1917] cursor-pointer"
             aria-label="목차 열기"
           >
             <Menu className="w-4 h-4" />
-            <span className="font-mono text-[11px] tracking-wider">CONTENTS</span>
+            <span className="editorial-label text-[11px]">CONTENTS</span>
           </button>
         </div>
       </div>
@@ -107,17 +107,17 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-[#292524]/15">
                 <div>
-                  <span className="text-[10px] tracking-[0.2em] font-mono text-[#881337] uppercase font-bold">
+                  <span className="editorial-label text-[10px] text-[#881337] block">
                     INDEX / CONTENTS
                   </span>
-                  <h3 className="text-xl font-serif font-bold text-[#1C1917]">
+                  <h3 className="editorial-subheading text-xl text-[#1C1917]">
                     RIGHTS FILE
                   </h3>
                 </div>
                 <button
                   id="close-menu-btn"
                   onClick={() => setMenuOpen(false)}
-                  className="p-1.5 text-xs font-mono text-[#78716C] hover:text-[#1C1917] border border-[#292524]/20 cursor-pointer"
+                  className="p-1.5 text-xs editorial-meta text-[#78716C] hover:text-[#1C1917] border border-[#292524]/20 cursor-pointer"
                 >
                   CLOSE ✕
                 </button>
@@ -133,8 +133,8 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
                   }}
                   className="w-full text-left p-3 border border-[#292524]/10 hover:border-[#1C1917] hover:bg-white transition-all cursor-pointer group"
                 >
-                  <span className="text-[10px] font-mono text-[#78716C] tracking-wider">COVER</span>
-                  <p className="text-sm font-serif font-bold text-[#1C1917] group-hover:text-[#881337]">
+                  <span className="editorial-meta text-[10px] text-[#78716C]">COVER</span>
+                  <p className="learning-body font-bold text-sm text-[#1C1917] group-hover:text-[#881337]">
                     표지 및 오늘의 탐구 질문
                   </p>
                 </button>
@@ -155,17 +155,17 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
                     }`}
                   >
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-mono font-bold text-[#881337]">
+                      <span className="editorial-meta text-xs font-bold text-[#881337]">
                         ISSUE {item.issueNumber}
                       </span>
-                      <span className="text-[10px] font-mono text-[#78716C]">
+                      <span className="editorial-meta text-[10px] text-[#78716C]">
                         {item.tag}
                       </span>
                     </div>
-                    <div className="text-sm font-serif font-bold text-[#1C1917] mt-0.5 group-hover:text-[#881337]">
+                    <div className="editorial-subheading text-sm text-[#1C1917] mt-0.5 group-hover:text-[#881337]">
                       {item.englishTitle}
                     </div>
-                    <div className="text-xs text-[#57534E] mt-1 font-sans">
+                    <div className="learning-body text-xs text-[#57534E] mt-1">
                       {item.koreanQuestion}
                     </div>
                   </button>
@@ -180,14 +180,14 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
                   }}
                   className="w-full text-left p-3 bg-[#881337]/5 border border-[#881337] hover:bg-[#881337]/10 transition-all cursor-pointer group"
                 >
-                  <div className="text-xs font-mono font-bold text-[#881337] flex items-center justify-between">
+                  <div className="editorial-meta text-xs font-bold text-[#881337] flex items-center justify-between">
                     <span>PORTFOLIO</span>
                     <span>FINAL POSTER</span>
                   </div>
-                  <div className="text-sm font-serif font-bold text-[#881337] mt-0.5">
+                  <div className="editorial-subheading text-sm text-[#881337] mt-0.5">
                     RIGHTS FILE : MY EDITION
                   </div>
-                  <div className="text-xs text-[#57534E] mt-1">
+                  <div className="learning-body text-xs text-[#57534E] mt-1">
                     내가 오늘 발견한 권리의 장면들과 최종 기록지
                   </div>
                 </button>
@@ -203,12 +203,12 @@ export const HeaderNavigation: React.FC<HeaderNavigationProps> = ({
                     setMenuOpen(false);
                   }
                 }}
-                className="flex items-center gap-1.5 text-xs text-[#78716C] hover:text-[#991B1B] cursor-pointer"
+                className="learning-body flex items-center gap-1.5 text-xs text-[#78716C] hover:text-[#991B1B] cursor-pointer"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 <span>나의 학습 기록 초기화</span>
               </button>
-              <span className="text-[10px] font-mono text-[#A8A29E]">2026 EDITION</span>
+              <span className="editorial-meta text-[10px] text-[#A8A29E]">2026 EDITION</span>
             </div>
           </div>
         </div>

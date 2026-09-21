@@ -70,7 +70,7 @@ export const MyEdition: React.FC<MyEditionProps> = ({
       <div className="flex flex-wrap items-center justify-between gap-4 print:hidden">
         <button
           onClick={() => onSelectIssue('issue-06')}
-          className="flex items-center gap-1.5 text-xs font-mono text-[#57534E] hover:text-[#1C1917] cursor-pointer"
+          className="flex items-center gap-1.5 text-xs editorial-meta text-[#57534E] hover:text-[#1C1917] cursor-pointer"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           <span>BACK TO ISSUE 06</span>
@@ -79,7 +79,7 @@ export const MyEdition: React.FC<MyEditionProps> = ({
         <div className="flex items-center gap-3">
           <button
             onClick={handleCopySummary}
-            className="flex items-center gap-2 bg-white border border-[#292524]/20 hover:border-[#1C1917] px-4 py-2 text-xs font-mono text-[#1C1917] transition-all cursor-pointer shadow-2xs"
+            className="flex items-center gap-2 bg-white border border-[#292524]/20 hover:border-[#1C1917] px-4 py-2 text-xs editorial-meta text-[#1C1917] transition-all cursor-pointer shadow-2xs"
           >
             {copied ? (
               <>
@@ -96,7 +96,7 @@ export const MyEdition: React.FC<MyEditionProps> = ({
 
           <button
             onClick={handlePrint}
-            className="flex items-center gap-2 bg-[#1C1917] hover:bg-[#881337] text-white px-5 py-2 text-xs font-serif font-bold tracking-wider transition-all cursor-pointer shadow-2xs"
+            className="learning-btn flex items-center gap-2 bg-[#1C1917] hover:bg-[#881337] text-white px-5 py-2 tracking-wider transition-all cursor-pointer shadow-2xs"
           >
             <Printer className="w-3.5 h-3.5" />
             <span>PRINT / SAVE AS PDF</span>
@@ -106,13 +106,13 @@ export const MyEdition: React.FC<MyEditionProps> = ({
 
       {/* EDITABLE FORM (Screen only) */}
       <div className="bg-[#F2EFE8] border border-[#292524]/20 p-6 space-y-4 print:hidden">
-        <span className="font-mono text-xs font-bold text-[#881337] uppercase block">
+        <span className="editorial-label text-[#881337] block">
           PORTFOLIO CUSTOMIZATION / 학생 발행물 편집
         </span>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
           <div>
-            <label className="font-mono text-[#57534E] block mb-1">
+            <label className="learning-label text-[#57534E] block mb-1">
               학생 성명 (EDITOR NAME)
             </label>
             <input
@@ -120,12 +120,12 @@ export const MyEdition: React.FC<MyEditionProps> = ({
               value={state.studentName}
               onChange={(e) => onUpdateStudentInfo(e.target.value, state.schoolClass)}
               placeholder="예: 홍길동"
-              className="w-full bg-white border border-[#292524]/20 p-2.5 text-sm focus:outline-hidden focus:border-[#881337]"
+              className="w-full bg-white border border-[#292524]/20 p-2.5 text-sm learning-body focus:outline-hidden focus:border-[#881337]"
             />
           </div>
 
           <div>
-            <label className="font-mono text-[#57534E] block mb-1">
+            <label className="learning-label text-[#57534E] block mb-1">
               학급 / 번호 (CLASS / NO.)
             </label>
             <input
@@ -133,13 +133,13 @@ export const MyEdition: React.FC<MyEditionProps> = ({
               value={state.schoolClass}
               onChange={(e) => onUpdateStudentInfo(state.studentName, e.target.value)}
               placeholder="예: 1학년 3반 15번"
-              className="w-full bg-white border border-[#292524]/20 p-2.5 text-sm focus:outline-hidden focus:border-[#881337]"
+              className="w-full bg-white border border-[#292524]/20 p-2.5 text-sm learning-body focus:outline-hidden focus:border-[#881337]"
             />
           </div>
         </div>
 
         <div>
-          <label className="font-mono text-xs text-[#57534E] block mb-1">
+          <label className="learning-label text-[#57534E] block mb-1">
             나의 에디션 표제 선택 또는 직접 입력 (TITLE)
           </label>
           <div className="flex flex-wrap gap-2 mb-2">
@@ -147,7 +147,7 @@ export const MyEdition: React.FC<MyEditionProps> = ({
               <button
                 key={sug}
                 onClick={() => onUpdateEditionTitle(sug)}
-                className="text-[11px] px-2.5 py-1 bg-white border border-[#292524]/15 hover:border-[#881337] cursor-pointer text-[#44403C]"
+                className="text-[11px] editorial-meta px-2.5 py-1 bg-white border border-[#292524]/15 hover:border-[#881337] cursor-pointer text-[#44403C]"
               >
                 {sug}
               </button>
@@ -158,12 +158,12 @@ export const MyEdition: React.FC<MyEditionProps> = ({
             value={state.editionTitle}
             onChange={(e) => onUpdateEditionTitle(e.target.value)}
             placeholder="에디션의 메인 헤드라인을 입력하세요."
-            className="w-full bg-white border border-[#292524]/20 p-2.5 text-sm font-serif font-bold text-[#1C1917] focus:outline-hidden focus:border-[#881337]"
+            className="w-full bg-white border border-[#292524]/20 p-2.5 text-sm editorial-subheading font-bold text-[#1C1917] focus:outline-hidden focus:border-[#881337]"
           />
         </div>
 
         <div>
-          <label className="font-mono text-xs text-[#57534E] block mb-1">
+          <label className="learning-label text-[#57534E] block mb-1">
             나의 생각 기록 (KEY SENTENCE / 한 줄의 통찰)
           </label>
           <textarea
@@ -171,7 +171,7 @@ export const MyEdition: React.FC<MyEditionProps> = ({
             onChange={(e) => onUpdateKeySentence(e.target.value)}
             rows={2}
             placeholder="이 매거진을 탐구하며 가장 기억에 남은 깨달음이나 권리에 대한 생각을 남겨보세요."
-            className="w-full bg-white border border-[#292524]/20 p-2.5 text-sm font-serif text-[#1C1917] focus:outline-hidden focus:border-[#881337]"
+            className="w-full bg-white border border-[#292524]/20 p-2.5 text-sm learning-body text-[#1C1917] focus:outline-hidden focus:border-[#881337]"
           />
         </div>
       </div>
@@ -182,13 +182,13 @@ export const MyEdition: React.FC<MyEditionProps> = ({
         className="bg-white border-4 border-[#1C1917] p-8 sm:p-14 shadow-lg space-y-10 relative overflow-hidden"
       >
         {/* Subtle Watermark Stamp */}
-        <div className="absolute top-10 right-10 pointer-events-none opacity-10 font-serif font-black text-8xl sm:text-9xl text-[#1C1917] select-none -rotate-12">
+        <div className="absolute top-10 right-10 pointer-events-none opacity-10 display-title font-black text-8xl sm:text-9xl text-[#1C1917] select-none -rotate-12">
           RIGHTS
         </div>
 
         {/* 1. Header Stamp Block */}
         <div className="border-b-2 border-[#1C1917] pb-6 space-y-3">
-          <div className="flex flex-wrap items-center justify-between gap-2 font-mono text-xs text-[#78716C]">
+          <div className="flex flex-wrap items-center justify-between gap-2 editorial-meta text-[#78716C]">
             <span className="stamp-box px-2.5 py-1 font-bold text-[#881337] border-[#881337] bg-white">
               RIGHTS FILE : SPECIAL EDITION
             </span>
@@ -197,18 +197,18 @@ export const MyEdition: React.FC<MyEditionProps> = ({
 
           <div className="pt-4 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-1">
-              <span className="font-mono text-xs text-[#78716C] uppercase block">
+              <span className="editorial-label text-[#78716C] uppercase block">
                 EDITOR IN CHIEF (탐구 학생)
               </span>
-              <p className="text-xl sm:text-2xl font-serif font-bold text-[#1C1917]">
+              <p className="editorial-heading text-xl sm:text-2xl text-[#1C1917]">
                 {state.studentName || '통합사회2 학생'}
-                <span className="text-sm font-sans font-normal text-[#57534E] ml-2">
+                <span className="learning-body text-sm font-normal text-[#57534E] ml-2">
                   ({state.schoolClass || '방과후 수업'})
                 </span>
               </p>
             </div>
 
-            <div className="text-left sm:text-right font-mono text-xs text-[#78716C]">
+            <div className="text-left sm:text-right editorial-meta text-[#78716C]">
               <span>DATE: {new Date().toLocaleDateString('ko-KR')}</span>
               <span className="block">CLASSIFICATION: COMPLETED</span>
             </div>
@@ -217,40 +217,40 @@ export const MyEdition: React.FC<MyEditionProps> = ({
 
         {/* 2. Main Title */}
         <div className="py-2 space-y-3">
-          <span className="font-mono text-xs tracking-widest text-[#881337] uppercase font-bold">
+          <span className="editorial-label text-[#881337]">
             SPECIAL REPORT HEADLINE
           </span>
-          <h1 className="text-3xl sm:text-5xl font-serif font-black tracking-tight text-[#1C1917] leading-tight">
+          <h1 className="display-title text-3xl sm:text-5xl text-[#1C1917] leading-tight">
             「{state.editionTitle || '우리가 당연하게 지나친 권리의 장면들'}」
           </h1>
         </div>
 
         {/* 3. KEY SENTENCE BANNER (The Student's Voice) */}
         <div className="p-6 sm:p-8 bg-[#FBF9F5] border-l-4 border-[#881337] space-y-2">
-          <span className="font-mono text-xs tracking-wider text-[#881337] uppercase font-bold">
+          <span className="editorial-label text-[#881337]">
             KEY SENTENCE : 나의 기록과 시선
           </span>
-          <blockquote className="text-lg sm:text-xl font-serif italic text-[#1C1917] font-medium leading-relaxed">
+          <blockquote className="editorial-quote not-italic text-lg sm:text-xl text-[#1C1917] font-medium leading-relaxed">
             “{state.keySentence || '모든 인간이 실질적으로 동등한 권리를 누릴 수 있도록, 일상의 당연한 규칙들을 비판적으로 살피는 눈을 기른다.'}”
           </blockquote>
         </div>
 
         {/* 4. 3 KEY EVIDENCE FILES (Student's Findings Matrix) */}
         <div className="space-y-4">
-          <span className="font-mono text-xs tracking-widest text-[#78716C] uppercase font-bold block border-b border-[#292524]/15 pb-2">
+          <span className="editorial-label text-[#78716C] block border-b border-[#292524]/15 pb-2">
             THREE CRITICAL EVIDENCE FILES FROM THE JOURNEY
           </span>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs font-sans">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* File 1: Minority & Equality */}
             <div className="p-4 bg-white border border-[#292524]/20 space-y-2">
-              <span className="font-mono text-xs font-bold text-[#881337] block">
+              <span className="editorial-meta text-xs font-bold text-[#881337] block">
                 FILE 01 / EQUALITY
               </span>
-              <h4 className="font-serif font-bold text-sm text-[#1C1917]">
+              <h4 className="editorial-subheading text-sm text-[#1C1917]">
                 형식적 평등과 실질적 평등
               </h4>
-              <p className="text-[#57534E] leading-relaxed">
+              <p className="learning-body text-xs text-[#57534E] leading-relaxed">
                 {state.issue02.stepStairNote ||
                   '모두에게 똑같은 계단을 적용하는 것은 기계적 평등일 뿐, 이동 약자의 접근권을 보장하는 경사로 설치가 실질적 평등이다.'}
               </p>
@@ -258,13 +258,13 @@ export const MyEdition: React.FC<MyEditionProps> = ({
 
             {/* File 2: Labor Contract & Protection */}
             <div className="p-4 bg-white border border-[#292524]/20 space-y-2">
-              <span className="font-mono text-xs font-bold text-[#881337] block">
+              <span className="editorial-meta text-xs font-bold text-[#881337] block">
                 FILE 02 / YOUTH LABOR
               </span>
-              <h4 className="font-serif font-bold text-sm text-[#1C1917]">
+              <h4 className="editorial-subheading text-sm text-[#1C1917]">
                 15세와 18세, 그리고 근로계약
               </h4>
-              <p className="text-[#57534E] leading-relaxed">
+              <p className="learning-body text-xs text-[#57534E] leading-relaxed">
                 {state.issue04.case01Judgement ||
                   '청소년도 원칙적인 근로자이며, 18세 미만자는 1일 7시간·주 35시간 제한 및 야간근로 원칙적 제한 등 추가 보호를 받는다.'}
               </p>
@@ -272,13 +272,13 @@ export const MyEdition: React.FC<MyEditionProps> = ({
 
             {/* File 3: Labor 3 Rights & Collective Power */}
             <div className="p-4 bg-white border border-[#292524]/20 space-y-2">
-              <span className="font-mono text-xs font-bold text-[#881337] block">
+              <span className="editorial-meta text-xs font-bold text-[#881337] block">
                 FILE 03 / COLLECTIVE
               </span>
-              <h4 className="font-serif font-bold text-sm text-[#1C1917]">
+              <h4 className="editorial-subheading text-sm text-[#1C1917]">
                 노동 3권과 실질적 인권 보장
               </h4>
-              <p className="text-[#57534E] leading-relaxed">
+              <p className="learning-body text-xs text-[#57534E] leading-relaxed">
                 {state.issue06.fileRecords[0]?.rationale ||
                   '힘의 비대칭을 극복하고 대등하게 교섭하기 위해 헌법은 단결권·단체교섭권·단체행동권을 부여하여 인간의 존엄을 지킨다.'}
               </p>
@@ -287,10 +287,10 @@ export const MyEdition: React.FC<MyEditionProps> = ({
         </div>
 
         {/* 5. Editorial Verification Stamp & Signatures */}
-        <div className="pt-8 border-t-2 border-[#1C1917] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 font-mono text-xs">
+        <div className="pt-8 border-t-2 border-[#1C1917] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 editorial-meta text-xs">
           <div className="space-y-1">
             <span className="text-[#78716C] block">CURRICULUM MAPPING</span>
-            <p className="font-serif text-[#1C1917]">
+            <p className="learning-body text-xs sm:text-sm text-[#1C1917]">
               고등학교 1학년 통합사회2 · 사회적 소수자와 인권 · 청소년 노동권
             </p>
           </div>
@@ -298,14 +298,14 @@ export const MyEdition: React.FC<MyEditionProps> = ({
           <div className="flex items-center gap-6 border-t sm:border-t-0 sm:border-l border-[#292524]/20 pt-4 sm:pt-0 sm:pl-6">
             <div className="text-center space-y-1">
               <span className="text-[10px] text-[#78716C] block">VERIFIED BY</span>
-              <div className="stamp-box px-3 py-1 font-bold text-[#1C1917]">
+              <div className="stamp-box px-3 py-1 editorial-label text-[#1C1917]">
                 RIGHTS FILE
               </div>
             </div>
 
             <div className="space-y-1">
               <span className="text-[10px] text-[#78716C] block">STUDENT SIGNATURE</span>
-              <div className="border-b border-[#1C1917] w-32 h-6 flex items-end justify-center font-serif text-sm font-bold text-[#1C1917]">
+              <div className="border-b border-[#1C1917] w-32 h-6 flex items-end justify-center editorial-meta text-sm font-bold text-[#1C1917]">
                 {state.studentName ? `${state.studentName} (서명)` : '________________'}
               </div>
             </div>
@@ -320,7 +320,7 @@ export const MyEdition: React.FC<MyEditionProps> = ({
             onSelectIssue('cover');
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
-          className="text-xs font-mono text-[#78716C] hover:text-[#1C1917] underline cursor-pointer"
+          className="editorial-meta text-xs text-[#78716C] hover:text-[#1C1917] underline cursor-pointer"
         >
           매거진 표지로 돌아가기 (RETURN TO COVER)
         </button>

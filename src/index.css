@@ -5,6 +5,7 @@
   --font-serif: 'Cormorant Garamond', 'Nanum Myeongjo', Georgia, serif;
   --font-myeongjo: 'Nanum Myeongjo', 'Batang', 'Noto Serif KR', serif;
   --font-sans: 'Pretendard', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 /* Global Korean Typography & Readability Defaults */
@@ -14,60 +15,102 @@ body {
   overflow-wrap: break-word;
   line-height: 1.8;
   color: #1C1917;
+  background-color: #FBF9F5;
+}
+
+/* Korean Typography Safety: Avoid slanted italic on Korean glyphs */
+:lang(ko) em,
+:lang(ko) i,
+.ko-quote {
+  font-style: normal;
 }
 
 /* ==========================================================================
    RIGHTS FILE UNIFIED TYPOGRAPHY SYSTEM
-   Rule 1: "보여주는 문장 = Serif" (Editorial / Display / Quotes)
-   Rule 2: "읽고 이해해야 하는 문장 = Sans-serif" (Learning / Body / UI / Questions)
+   Axis 1: "보여주는 문장 = Editorial Serif" (Display / Chapter Titles / Quotes / Branding)
+   Axis 2: "읽고 이해해야 하는 문장 = Learning Sans" (Body / Questions / Cases / UI / Notes)
    ========================================================================== */
 
-/* 1. EDITORIAL SERIF (잡지의 개성과 에디토리얼 분위기) */
+/* 1. EDITORIAL SERIF (잡지의 개성, 상징적 표제, 굵직한 인용) */
 .font-editorial {
   font-family: var(--font-editorial);
 }
 
+/* 大형 영문 / 숫자 타이포그래피 (≠ FEW, 15 ≠ 18, RIGHTS FILE 등) */
+.display-title,
 .editorial-display {
   font-family: var(--font-editorial);
   font-weight: 900;
-  letter-spacing: -0.02em;
-  line-height: 1.05;
+  letter-spacing: -0.025em;
+  line-height: 1;
 }
 
+/* 각 챕터 / 이슈 대표 표제 */
+.editorial-heading,
 .chapter-title {
   font-family: var(--font-editorial);
   font-weight: 700;
-  font-size: 1.25rem; /* 20px */
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.35;
+  color: #1C1917;
+  letter-spacing: -0.015em;
+}
+@media (min-width: 640px) {
+  .editorial-heading,
+  .chapter-title {
+    font-size: 2rem; /* 32px */
+  }
+}
+@media (min-width: 1024px) {
+  .editorial-heading,
+  .chapter-title {
+    font-size: 2.25rem; /* 36px */
+  }
+}
+
+/* SCENE / CASE 소표제 */
+.scene-title {
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  font-size: 1.1875rem; /* 19px */
   line-height: 1.4;
   color: #1C1917;
   letter-spacing: -0.01em;
 }
 @media (min-width: 640px) {
-  .chapter-title {
-    font-size: 1.5rem; /* 24px */
+  .scene-title {
+    font-size: 1.375rem; /* 22px */
   }
 }
 
+/* 큰 인용문 및 기억해야 할 한 문장 (KEY SENTENCE) */
+.quote,
 .editorial-quote {
   font-family: var(--font-editorial);
-  font-size: 1.5rem; /* 24px */
-  line-height: 1.6;
-  font-style: italic;
+  font-weight: 600;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.65;
   color: #1C1917;
+  font-style: normal; /* 한글 왜곡 방지 */
 }
 @media (min-width: 640px) {
+  .quote,
   .editorial-quote {
-    font-size: 1.875rem; /* 30px */
+    font-size: 1.5rem; /* 24px */
+    line-height: 1.6;
   }
 }
 
-/* 2. LEARNING SANS-SERIF (학생이 실제로 읽고 판단해야 하는 정보) */
+
+/* 2. LEARNING SANS-SERIF (고1 학생 학습용 본문, 질문, 피드백, UI) */
+.font-learning,
 .font-sans-learning {
   font-family: var(--font-sans);
 }
 
-/* Primary Korean learning body text (16~17px, line-height 1.8) */
-.learning-body {
+/* 학습용 핵심 본문 (기사, 지문, 설명): 16~17px, line-height 1.8~1.85 */
+.learning-body,
+.body {
   font-family: var(--font-sans);
   font-size: 1rem; /* 16px */
   line-height: 1.8;
@@ -76,44 +119,16 @@ body {
   word-break: keep-all;
 }
 @media (min-width: 640px) {
-  .learning-body {
-    font-size: 1.03125rem; /* 16.5px */
+  .learning-body,
+  .body {
+    font-size: 1.0625rem; /* 17px */
     line-height: 1.85;
   }
 }
 
-/* Secondary explanations / helpers / tips (14~15px) */
-.learning-secondary {
-  font-family: var(--font-sans);
-  font-size: 0.875rem; /* 14px */
-  line-height: 1.7;
-  color: #57534E;
-  font-weight: 400;
-  word-break: keep-all;
-}
-@media (min-width: 640px) {
-  .learning-secondary {
-    font-size: 0.9375rem; /* 15px */
-  }
-}
-
-/* Card descriptions / choice texts (14~15px, never below 13px) */
-.learning-card-desc {
-  font-family: var(--font-sans);
-  font-size: 0.875rem; /* 14px */
-  line-height: 1.7;
-  color: #44403C;
-  font-weight: 400;
-  word-break: keep-all;
-}
-@media (min-width: 640px) {
-  .learning-card-desc {
-    font-size: 0.9375rem; /* 15px */
-  }
-}
-
-/* Core Question sentence (18~20px, Sans-serif Semibold, wine color, no heavy italic on Korean) */
-.learning-question {
+/* 핵심 발문 및 생각 질문: 18~20px, font-semibold, wine/burgundy, no italic */
+.learning-question,
+.question {
   font-family: var(--font-sans);
   font-size: 1.125rem; /* 18px */
   line-height: 1.65;
@@ -123,12 +138,80 @@ body {
   word-break: keep-all;
 }
 @media (min-width: 640px) {
-  .learning-question {
+  .learning-question,
+  .question {
     font-size: 1.25rem; /* 20px */
   }
 }
 
-/* Button typography: 14~15px Semibold */
+/* 안내문, 지시문, 활동 프롬프트: 14~15px */
+.learning-instruction,
+.instruction {
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.7;
+  color: #57534E;
+  font-weight: 500;
+  word-break: keep-all;
+}
+@media (min-width: 640px) {
+  .learning-instruction,
+  .instruction {
+    font-size: 0.9375rem; /* 15px */
+  }
+}
+
+/* 카드 / 박스 소제목: 15~16px, font-bold */
+.card-title {
+  font-family: var(--font-sans);
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.45;
+  color: #1C1917;
+  font-weight: 700;
+  word-break: keep-all;
+}
+@media (min-width: 640px) {
+  .card-title {
+    font-size: 1rem; /* 16px */
+  }
+}
+
+/* 카드 설명, 사례 본문, 대화문: 14~15px, line-height 1.7 */
+.card-body,
+.learning-card-desc {
+  font-family: var(--font-sans);
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.7;
+  color: #44403C;
+  font-weight: 400;
+  word-break: keep-all;
+}
+@media (min-width: 640px) {
+  .card-body,
+  .learning-card-desc {
+    font-size: 0.9375rem; /* 15px */
+  }
+}
+
+/* 해설, 피드백, 법적 세부 근거: 13.5~14px */
+.learning-feedback,
+.feedback {
+  font-family: var(--font-sans);
+  font-size: 0.84375rem; /* 13.5px */
+  line-height: 1.7;
+  color: #292524;
+  font-weight: 400;
+  word-break: keep-all;
+}
+@media (min-width: 640px) {
+  .learning-feedback,
+  .feedback {
+    font-size: 0.875rem; /* 14px */
+  }
+}
+
+/* 조작 버튼 텍스트: 14~15px Semibold */
+.button-label,
 .learning-btn {
   font-family: var(--font-sans);
   font-size: 0.875rem; /* 14px */
@@ -137,27 +220,35 @@ body {
   white-space: nowrap;
 }
 @media (min-width: 640px) {
+  .button-label,
   .learning-btn {
     font-size: 0.9375rem; /* 15px */
   }
 }
 
-/* Editorial Labels (SCENE 01, CASE ANALYSIS, MARK THE EVIDENCE, etc.) */
+/* 에디토리얼 레이블 (SCENE 01, CASE ANALYSIS, CONCEPT NOTE 등): 11~12px */
 .editorial-label {
   font-family: var(--font-sans);
   font-size: 0.75rem; /* 12px */
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-/* Metadata & subtle badges (11~12px) */
-.editorial-meta {
+/* 메타데이터, 출처, 캡션: 11~12px */
+.editorial-meta,
+.caption {
   font-family: var(--font-sans);
   font-size: 0.6875rem; /* 11px */
   font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #78716C;
+}
+@media (min-width: 640px) {
+  .editorial-meta,
+  .caption {
+    font-size: 0.75rem; /* 12px */
+  }
 }
 
 /* Reading container constraint for optimal Korean reading cadence */
@@ -166,7 +257,7 @@ body {
   line-height: 1.85;
 }
 
-/* Custom Editorial Elements */
+/* Custom Editorial UI Elements */
 .paper-texture {
   background-color: #FBF9F5;
   background-image: radial-gradient(#E8E4D9 0.65px, transparent 0.65px);
