@@ -135,7 +135,7 @@ export const Issue06FinalFile: React.FC<Issue06FinalFileProps> = ({
               <span className="editorial-meta">WITNESS &amp; EVIDENCE</span>
             </div>
 
-            <p className="learning-instruction text-xs text-[#57534E] pb-2">
+            <p className="learning-instruction text-xs sm:text-sm text-[#57534E] pb-2">
               * 기사를 꼼꼼히 읽으며 문제의 소지가 있거나 법적으로 검토해야 할 문장을 직접 클릭하여 형광펜을 칠해보세요.
             </p>
 
@@ -184,20 +184,20 @@ export const Issue06FinalFile: React.FC<Issue06FinalFileProps> = ({
 
               {activeClueSegment ? (
                 <div className="space-y-3">
-                  <div className="p-3 bg-white border border-[#292524]/15">
+                  <div className="p-3.5 bg-white border border-[#292524]/15">
                     <span className="editorial-meta text-[10px] text-[#78716C] block">
                       현재 선택된 문장 단서:
                     </span>
-                    <p className="card-title text-sm text-[#1C1917] mt-1">
+                    <p className="card-title text-sm sm:text-base text-[#1C1917] mt-1 leading-snug">
                       {activeClueSegment.text}
                     </p>
                   </div>
 
-                  <p className="learning-instruction text-xs text-[#57534E]">
+                  <p className="learning-instruction text-xs sm:text-sm text-[#57534E]">
                     이 문장과 연관된다고 생각하는 개념을 아래에서 1개 이상 선택하세요:
                   </p>
 
-                  <div className="flex flex-wrap gap-1.5">
+                  <div className="flex flex-wrap gap-2">
                     {AVAILABLE_CONCEPTS_FOR_CONNECT.map((concept) => {
                       const assignedList = issue06State.clueConceptMap[activeClueSegment.id] || [];
                       const isAssigned = assignedList.includes(concept);
@@ -206,9 +206,9 @@ export const Issue06FinalFile: React.FC<Issue06FinalFileProps> = ({
                         <button
                           key={concept}
                           onClick={() => toggleConceptForClue(activeClueSegment.id, concept)}
-                          className={`px-2.5 py-1 text-xs learning-body rounded-xs transition-all cursor-pointer border ${
+                          className={`px-3 py-1.5 text-xs sm:text-sm learning-choice rounded-xs transition-all cursor-pointer border ${
                             isAssigned
-                              ? 'bg-[#881337] text-white border-[#881337] font-bold shadow-2xs'
+                              ? 'bg-[#881337] text-white border-[#881337] font-semibold shadow-2xs'
                               : 'bg-white text-[#44403C] border-[#292524]/20 hover:border-[#1C1917]'
                           }`}
                         >
@@ -219,12 +219,12 @@ export const Issue06FinalFile: React.FC<Issue06FinalFileProps> = ({
                     })}
                   </div>
 
-                  <div className="pt-2 learning-instruction text-[11px] text-[#78716C]">
+                  <div className="pt-2 learning-feedback text-xs sm:text-sm text-[#57534E]">
                     💡 <strong>에디터의 조언:</strong> 하나의 사건은 단 하나의 정답 개념으로만 환원되지 않습니다. 여러 권리 개념이 복합적으로 얽혀 있음을 확인해 보세요.
                   </div>
                 </div>
               ) : (
-                <div className="p-6 text-center learning-instruction text-xs text-[#78716C] bg-white border border-[#292524]/10">
+                <div className="p-6 text-center learning-instruction text-xs sm:text-sm text-[#57534E] bg-white border border-[#292524]/10 leading-relaxed">
                   왼쪽 기사에서 형광펜으로 표시할 문장을 먼저 클릭해 보세요. 해당 문장과 연결할 수 있는 개념 팔레트가 활성화됩니다.
                 </div>
               )}
@@ -319,7 +319,7 @@ export const Issue06FinalFile: React.FC<Issue06FinalFileProps> = ({
                     <span className="editorial-meta text-[10px] text-[#78716C] block">
                       내가 발견한 문제:
                     </span>
-                    <p className="learning-body font-semibold text-sm text-[#1C1917] mt-0.5 min-h-[3rem]">
+                    <p className="card-title text-sm sm:text-base font-semibold text-[#1C1917] mt-0.5 min-h-[3rem] leading-snug">
                       {seg ? seg.text : '(기사에서 단서를 클릭하여 채워보세요)'}
                     </p>
                   </div>
@@ -328,7 +328,7 @@ export const Issue06FinalFile: React.FC<Issue06FinalFileProps> = ({
                     <span className="editorial-meta text-[10px] text-[#78716C] block">
                       관련 개념:
                     </span>
-                    <p className="editorial-meta text-xs text-[#881337] font-semibold mt-0.5 min-h-[1.5rem]">
+                    <p className="editorial-meta text-xs sm:text-sm text-[#881337] font-semibold mt-0.5 min-h-[1.5rem]">
                       {concepts.length > 0 ? concepts.join(', ') : '―'}
                     </p>
                   </div>
@@ -338,7 +338,7 @@ export const Issue06FinalFile: React.FC<Issue06FinalFileProps> = ({
                   <span className="editorial-meta text-[10px] text-[#78716C] block">
                     중요하다고 본 근거:
                   </span>
-                  <p className="card-body text-xs text-[#44403C] mt-0.5">
+                  <p className="card-body text-xs sm:text-sm text-[#292524] mt-0.5 leading-relaxed">
                     {seg ? seg.editorialComment : '단서를 선택하면 법적 근거가 정리됩니다.'}
                   </p>
                 </div>

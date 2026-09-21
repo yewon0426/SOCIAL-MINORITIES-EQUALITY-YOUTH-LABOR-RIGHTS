@@ -228,11 +228,11 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
                     </span>
                   </div>
 
-                  <h3 className="editorial-subheading text-xl text-[#1C1917]">
+                  <h3 className="card-title text-lg sm:text-xl text-[#1C1917]">
                     {item.name}
                   </h3>
 
-                  <div className="space-y-2 text-[#44403C] learning-body text-sm sm:text-[15px] leading-relaxed">
+                  <div className="space-y-2.5 text-[#292524] learning-body text-base leading-relaxed">
                     {item.body.map((p, idx) => (
                       <p key={idx}>{p}</p>
                     ))}
@@ -402,10 +402,10 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
               {/* Feature 01 */}
               <div className="bg-white border border-[#292524]/20 p-5 space-y-2.5 shadow-2xs">
                 <span className="editorial-label text-[#881337] block">01</span>
-                <h4 className="editorial-subheading text-base sm:text-lg text-[#1C1917]">
+                <h4 className="card-title text-base sm:text-lg text-[#1C1917]">
                   식별 가능성
                 </h4>
-                <p className="learning-body text-xs sm:text-sm text-[#57534E] leading-relaxed">
+                <p className="card-body text-sm sm:text-[15px] text-[#44403C] leading-relaxed">
                   신체적·문화적 특징 등으로 다른 집단과 구별될 수 있다.
                 </p>
               </div>
@@ -413,10 +413,10 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
               {/* Feature 02 */}
               <div className="bg-white border border-[#292524]/20 p-5 space-y-2.5 shadow-2xs">
                 <span className="editorial-label text-[#881337] block">02</span>
-                <h4 className="editorial-subheading text-base sm:text-lg text-[#1C1917]">
+                <h4 className="card-title text-base sm:text-lg text-[#1C1917]">
                   권력의 열세
                 </h4>
-                <p className="learning-body text-xs sm:text-sm text-[#57534E] leading-relaxed">
+                <p className="card-body text-sm sm:text-[15px] text-[#44403C] leading-relaxed">
                   사회적 관계에서 상대적으로 불리한 위치에 놓일 수 있다.
                 </p>
               </div>
@@ -424,10 +424,10 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
               {/* Feature 03 */}
               <div className="bg-white border border-[#292524]/20 p-5 space-y-2.5 shadow-2xs">
                 <span className="editorial-label text-[#881337] block">03</span>
-                <h4 className="editorial-subheading text-base sm:text-lg text-[#1C1917]">
+                <h4 className="card-title text-base sm:text-lg text-[#1C1917]">
                   차별적 대우
                 </h4>
-                <p className="learning-body text-xs sm:text-sm text-[#57534E] leading-relaxed">
+                <p className="card-body text-sm sm:text-[15px] text-[#44403C] leading-relaxed">
                   특정한 특성을 이유로 불리하거나 차별적인 대우를 경험할 수 있다.
                 </p>
               </div>
@@ -435,10 +435,10 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
               {/* Feature 04 */}
               <div className="bg-white border border-[#292524]/20 p-5 space-y-2.5 shadow-2xs">
                 <span className="editorial-label text-[#881337] block">04</span>
-                <h4 className="editorial-subheading text-base sm:text-lg text-[#1C1917]">
+                <h4 className="card-title text-base sm:text-lg text-[#1C1917]">
                   집단적 정체성
                 </h4>
-                <p className="learning-body text-xs sm:text-sm text-[#57534E] leading-relaxed">
+                <p className="card-body text-sm sm:text-[15px] text-[#44403C] leading-relaxed">
                   공통된 경험 등을 바탕으로 집단 구성원으로서의 정체성을 가질 수 있다.
                 </p>
               </div>
@@ -504,7 +504,7 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
                 <div className="editorial-meta text-xs text-[#881337] font-bold">
                   “5%”
                 </div>
-                <p className="learning-body text-xs sm:text-sm text-[#44403C] leading-relaxed">
+                <p className="card-body text-sm sm:text-[15px] text-[#292524] leading-relaxed">
                   → 숫자가 적다는 사실만으로 사회적 소수자라고 판단하기는 어렵습니다. 학교생활에서 지속적인 불이익이나 차별적 대우가 확인되지 않는다면 단순한 수적 소수입니다.
                 </p>
               </div>
@@ -517,13 +517,13 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
                     수적 다수도 소수자 가능
                   </span>
                 </div>
-                <h4 className="editorial-subheading text-lg text-[#1C1917]">
+                <h4 className="card-title text-lg text-[#1C1917]">
                   여성
                 </h4>
                 <div className="editorial-meta text-xs text-[#881337] font-bold">
                   “수적으로 소수가 아님”
                 </div>
-                <p className="learning-body text-xs sm:text-sm text-[#44403C] leading-relaxed">
+                <p className="card-body text-sm sm:text-[15px] text-[#292524] leading-relaxed">
                   → 수적으로 소수가 아니더라도 특정한 사회적 관계에서 불리한 위치나 차별을 경험할 수 있습니다. 중요한 것은 인구 수가 아닌 사회적 권력 관계입니다.
                 </p>
               </div>
@@ -536,13 +536,13 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
                     사회적 관계와 환경
                   </span>
                 </div>
-                <h4 className="editorial-subheading text-lg text-[#1C1917]">
+                <h4 className="card-title text-lg text-[#1C1917]">
                   이주 노동자 / 휠체어 이용자
                 </h4>
                 <div className="editorial-meta text-xs text-[#881337] font-bold">
                   “위치와 환경의 맥락”
                 </div>
-                <p className="learning-body text-xs sm:text-sm text-[#44403C] leading-relaxed">
+                <p className="card-body text-sm sm:text-[15px] text-[#292524] leading-relaxed">
                   → 단순히 ‘외국인이라서’, ‘장애가 있어서’라고 판단하는 것이 아니라, 사회적 관계에서의 위치, 차별적 대우, 접근을 가로막는 사회적 환경 등을 함께 살펴봅니다.
                 </p>
               </div>
@@ -708,35 +708,35 @@ export const Issue01Minority: React.FC<Issue01MinorityProps> = ({
                 </span>
               </div>
 
-              <h3 className="editorial-heading text-xl sm:text-2xl text-[#1C1917]">
+              <h3 className="learning-subheading text-xl sm:text-2xl font-bold text-[#1C1917]">
                 사회적 소수자 탐구 최종 요약
               </h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="p-4 bg-white border border-[#292524]/15 space-y-1.5 shadow-2xs">
                   <span className="editorial-label text-xs text-[#881337]">01</span>
-                  <p className="learning-body text-sm sm:text-[15px] text-[#1C1917] leading-relaxed">
+                  <p className="learning-body text-base text-[#1C1917] leading-relaxed">
                     숫자가 적다고 해서 곧바로 사회적 소수자가 되는 것은 아니다.
                   </p>
                 </div>
 
                 <div className="p-4 bg-white border border-[#292524]/15 space-y-1.5 shadow-2xs">
                   <span className="editorial-label text-xs text-[#881337]">02</span>
-                  <p className="learning-body text-sm sm:text-[15px] text-[#1C1917] leading-relaxed">
+                  <p className="learning-body text-base text-[#1C1917] leading-relaxed">
                     사회적 소수자는 사회적 관계 속에서 상대적으로 불리한 위치에 놓이거나 차별을 경험할 수 있다.
                   </p>
                 </div>
 
                 <div className="p-4 bg-white border border-[#292524]/15 space-y-1.5 shadow-2xs">
                   <span className="editorial-label text-xs text-[#881337]">03</span>
-                  <p className="learning-body text-sm sm:text-[15px] text-[#1C1917] leading-relaxed">
+                  <p className="learning-body text-base text-[#1C1917] leading-relaxed">
                     사회적 소수자를 이해할 때는 <strong>식별 가능성, 권력의 열세, 차별적 대우, 집단적 정체성</strong> 등을 살펴볼 수 있다.
                   </p>
                 </div>
 
                 <div className="p-4 bg-white border border-[#292524]/15 space-y-1.5 shadow-2xs">
                   <span className="editorial-label text-xs text-[#881337]">04</span>
-                  <p className="learning-body text-sm sm:text-[15px] text-[#1C1917] leading-relaxed">
+                  <p className="learning-body text-base text-[#1C1917] leading-relaxed">
                     같은 특성을 가진 사람이라도 사회적 환경과 상황에 따라 경험하는 불리함이 달라질 수 있다.
                   </p>
                 </div>

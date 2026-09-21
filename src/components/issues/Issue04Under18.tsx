@@ -155,40 +155,40 @@ export const Issue04Under18: React.FC<Issue04Under18Props> = ({
           </button>
 
           {issue04State.readDetailsOpen && (
-            <div className="mt-4 pt-4 border-t border-[#292524]/15 space-y-3 text-xs text-[#292524] animate-in fade-in duration-200">
+            <div className="mt-4 pt-4 border-t border-[#292524]/15 space-y-3 animate-in fade-in duration-200">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="bg-white p-3.5 border border-[#292524]/10 space-y-1.5">
+                <div className="bg-white p-4 border border-[#292524]/10 space-y-2">
                   <span className="editorial-label text-[#881337] block">
                     1. 15세 미만자(중학교 재학 중인 18세 미만 포함)의 예외:
                   </span>
-                  <p className="card-body text-xs text-[#292524]">
+                  <p className="card-body text-sm sm:text-[15px] text-[#292524] leading-relaxed">
                     근로기준법 제64조에 따라 원칙적으로 고용할 수 없으나, <strong>고용노동부장관이 발급한 ‘취직인허증’</strong>을 받은 경우에 한하여 예외적으로 취업이 허용됩니다.
                   </p>
                 </div>
 
-                <div className="bg-white p-3.5 border border-[#292524]/10 space-y-1.5">
+                <div className="bg-white p-4 border border-[#292524]/10 space-y-2">
                   <span className="editorial-label text-[#881337] block">
                     2. 사업장 필수 비치 서류 (근로기준법 제66조):
                   </span>
-                  <p className="card-body text-xs text-[#292524]">
+                  <p className="card-body text-sm sm:text-[15px] text-[#292524] leading-relaxed">
                     사업주는 18세 미만자를 고용할 경우, 연령을 증명하는 <strong>‘가족관계기록사항에 관한 증명서’</strong>와 친권자 또는 후견인의 <strong>‘동의서’</strong>를 사업장에 반드시 갖추어 두어야 합니다.
                   </p>
                 </div>
 
-                <div className="bg-white p-3.5 border border-[#292524]/10 space-y-1.5">
+                <div className="bg-white p-4 border border-[#292524]/10 space-y-2">
                   <span className="editorial-label text-[#881337] block">
                     3. 근로계약 독자 체결 및 대리 금지 (제67조):
                   </span>
-                  <p className="card-body text-xs text-[#292524]">
+                  <p className="card-body text-sm sm:text-[15px] text-[#292524] leading-relaxed">
                     친권자나 후견인은 미성년자의 근로계약을 대리할 수 없습니다. 청소년 본인이 직접 체결해야 합니다. (단, 불리한 계약의 경우 친권자나 노동위원회가 해지 가능)
                   </p>
                 </div>
 
-                <div className="bg-white p-3.5 border border-[#292524]/10 space-y-1.5">
+                <div className="bg-white p-4 border border-[#292524]/10 space-y-2">
                   <span className="editorial-label text-[#881337] block">
                     4. 독자적 임금 청구권 (제68조):
                   </span>
-                  <p className="card-body text-xs text-[#292524]">
+                  <p className="card-body text-sm sm:text-[15px] text-[#292524] leading-relaxed">
                     미성년자는 일한 대가인 임금을 부모 등 대리인을 거치지 않고 독자적으로 직접 청구하고 지급받을 권리가 법률로 보장됩니다.
                   </p>
                 </div>
@@ -361,7 +361,7 @@ export const Issue04Under18: React.FC<Issue04Under18Props> = ({
               <span className="editorial-label text-[#881337] block">
                 CLUE CONNECTION (단서와 법률의 연결)
               </span>
-              <ul className="space-y-1.5 learning-body text-xs sm:text-sm text-[#292524]">
+              <ul className="space-y-2 learning-body text-sm sm:text-[15px] text-[#292524]">
                 <li className="flex items-center gap-2">
                   <span className="editorial-label text-[#881337]">[17세]</span>
                   <span>→ 18세 미만 연소근로자에 해당하여 특별 보호 대상</span>
@@ -373,11 +373,11 @@ export const Issue04Under18: React.FC<Issue04Under18Props> = ({
               </ul>
             </div>
 
-            <div className="p-4 bg-white border border-[#292524]/20 space-y-2 text-xs">
+            <div className="p-4 bg-white border border-[#292524]/20 space-y-2">
               <span className="editorial-label text-[#1C1917] block">
                 ⚖️ 확인해야 할 법적 기준과 예외 요건:
               </span>
-              <p className="learning-instruction text-[#57534E]">
+              <p className="learning-instruction text-sm sm:text-[15px] text-[#44403C] leading-relaxed">
                 근로기준법 제70조 제2항에 따라 18세 미만자의 야간근로(22:00~06:00)는 <strong>원칙적으로 제한</strong>됩니다.
                 단, “절대 불가”는 아니며 <strong>근로자의 동의</strong>와 함께 <strong>고용노동부장관(지방고용노동청장)의 인가</strong>를 사전에 받은 경우에 한하여 예외적으로 가능합니다.
               </p>

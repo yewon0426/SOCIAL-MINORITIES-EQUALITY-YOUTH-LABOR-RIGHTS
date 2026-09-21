@@ -114,34 +114,34 @@ export const Issue03BeforeYouWork: React.FC<Issue03BeforeYouWorkProps> = ({
             </h3>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-xs">
-            <div className="p-3 bg-white border border-[#292524]/10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="p-3.5 bg-white border border-[#292524]/10 space-y-1">
               <span className="editorial-label text-[#881337] block">01 근로조건의 명시</span>
-              <span className="card-body text-xs text-[#57534E] mt-0.5 block">임금, 근로시간, 휴일 등 법정 조건을 반드시 서면 명시</span>
+              <span className="card-body text-sm sm:text-[15px] text-[#292524] block leading-snug">임금, 근로시간, 휴일 등 법정 조건을 반드시 서면 명시</span>
             </div>
-            <div className="p-3 bg-white border border-[#292524]/10">
+            <div className="p-3.5 bg-white border border-[#292524]/10 space-y-1">
               <span className="editorial-label text-[#881337] block">02 최저임금 보장</span>
-              <span className="card-body text-xs text-[#57534E] mt-0.5 block">나이·신분에 따른 부당 감액 금지, 법정 최저시급 이상 지급</span>
+              <span className="card-body text-sm sm:text-[15px] text-[#292524] block leading-snug">나이·신분에 따른 부당 감액 금지, 법정 최저시급 이상 지급</span>
             </div>
-            <div className="p-3 bg-white border border-[#292524]/10">
+            <div className="p-3.5 bg-white border border-[#292524]/10 space-y-1">
               <span className="editorial-label text-[#881337] block">03 4대 임금 지급 원칙</span>
-              <span className="card-body text-xs text-[#57534E] mt-0.5 block">통화불, 직접불, 전액불, 매월 1회 이상 정기일 지급</span>
+              <span className="card-body text-sm sm:text-[15px] text-[#292524] block leading-snug">통화불, 직접불, 전액불, 매월 1회 이상 정기일 지급</span>
             </div>
-            <div className="p-3 bg-white border border-[#292524]/10">
+            <div className="p-3.5 bg-white border border-[#292524]/10 space-y-1">
               <span className="editorial-label text-[#881337] block">04 휴게시간의 자유이용</span>
-              <span className="card-body text-xs text-[#57534E] mt-0.5 block">4시간 일하면 30분 이상, 8시간 일하면 1시간 이상 보장</span>
+              <span className="card-body text-sm sm:text-[15px] text-[#292524] block leading-snug">4시간 일하면 30분 이상, 8시간 일하면 1시간 이상 보장</span>
             </div>
-            <div className="p-3 bg-white border border-[#292524]/10">
+            <div className="p-3.5 bg-white border border-[#292524]/10 space-y-1">
               <span className="editorial-label text-[#881337] block">05 임금명세서 교부</span>
-              <span className="card-body text-xs text-[#57534E] mt-0.5 block">임금의 세부 계산 내역과 공제 내역을 서면·전자로 전달</span>
+              <span className="card-body text-sm sm:text-[15px] text-[#292524] block leading-snug">임금의 세부 계산 내역과 공제 내역을 서면·전자로 전달</span>
             </div>
-            <div className="p-3 bg-white border border-[#292524]/10">
+            <div className="p-3.5 bg-white border border-[#292524]/10 space-y-1">
               <span className="editorial-label text-[#881337] block">06 법정 유급휴일</span>
-              <span className="card-body text-xs text-[#57534E] mt-0.5 block">주 15시간 이상 근무 및 소정근로일 개근 시 주휴수당 부여</span>
+              <span className="card-body text-sm sm:text-[15px] text-[#292524] block leading-snug">주 15시간 이상 근무 및 소정근로일 개근 시 주휴수당 부여</span>
             </div>
           </div>
 
-          <p className="learning-instruction text-[11px] text-[#78716C] pt-2 border-t border-[#292524]/10">
+          <p className="learning-instruction text-xs sm:text-sm text-[#57534E] pt-2 border-t border-[#292524]/10">
             * 각 제도의 적용 요건(예: 주 15시간 이상 여부, 상시 5인 이상 사업장 여부 등)과 법률상 예외가 존재할 수 있으므로, 법률 내용을 지나치게 단순화하지 않고 사실관계를 정확히 대조해야 합니다.
           </p>
         </div>
@@ -199,10 +199,10 @@ export const Issue03BeforeYouWork: React.FC<Issue03BeforeYouWorkProps> = ({
                 </span>
                 <span className="editorial-meta text-[#B91C1C] font-bold">4/4 탐색 완료</span>
               </div>
-              <h4 className="card-title text-lg text-[#1C1917]">
+              <h4 className="card-title text-lg sm:text-xl text-[#1C1917]">
                 「근로조건의 서면 명시 및 교부 의무」 (근로기준법 제17조)
               </h4>
-              <p className="card-body text-xs sm:text-sm text-[#44403C]">
+              <p className="card-body text-sm sm:text-[15px] text-[#292524] leading-relaxed">
                 사용자는 근로계약을 체결할 때 임금, 소정근로시간, 주휴일 등 핵심 근로조건을 <strong>서면으로 명시하고 근로자의 요구가 없더라도 반드시 1부를 직접 교부</strong>해야 합니다.
                 구두 계약이나 서면 미교부는 근로기준법 위반으로 사용자가 형사처벌이나 과태료 대상이 되며, 청소년에게도 성인과 똑같이 보장됩니다.
               </p>
@@ -213,7 +213,7 @@ export const Issue03BeforeYouWork: React.FC<Issue03BeforeYouWorkProps> = ({
         {/* Contract Paper Mockup */}
         <div className="border border-[#292524]/30 bg-[#FFFDF9] p-6 sm:p-8 shadow-xs relative">
           <div className="text-center border-b border-[#292524]/20 pb-4 mb-6">
-            <h4 className="editorial-subheading text-xl sm:text-2xl text-[#1C1917] tracking-widest uppercase">
+            <h4 className="learning-subheading text-xl sm:text-2xl font-bold text-[#1C1917] tracking-wider uppercase">
               표 준 근 로 계 약 서
             </h4>
             <p className="editorial-meta text-[#78716C] mt-1">
@@ -240,14 +240,14 @@ export const Issue03BeforeYouWork: React.FC<Issue03BeforeYouWorkProps> = ({
                       <span className="editorial-label text-[#1C1917] block">
                         {part.field}
                       </span>
-                      <p className={`learning-body text-sm ${isMarked ? 'red-pen-underline text-[#1C1917] font-medium' : 'text-[#44403C]'}`}>
+                      <p className={`learning-body text-base ${isMarked ? 'red-pen-underline text-[#1C1917] font-medium' : 'text-[#292524]'}`}>
                         {part.content}
                       </p>
                     </div>
 
                     {/* Red correction pen annotation */}
                     {isMarked ? (
-                      <div className="shrink-0 text-left sm:text-right font-serif text-xs text-[#B91C1C] font-bold animate-in fade-in duration-200">
+                      <div className="shrink-0 text-left sm:text-right font-sans text-xs sm:text-sm text-[#B91C1C] font-semibold animate-in fade-in duration-200">
                         <span>{part.annotation}</span>
                         <span className="block text-[10px] text-[#78716C] editorial-meta">
                           {part.legalBasis}
@@ -321,11 +321,11 @@ export const Issue03BeforeYouWork: React.FC<Issue03BeforeYouWorkProps> = ({
           <span className="editorial-label text-[#881337] block">
             CONCEPT NOTE : 대기시간 vs 휴게시간
           </span>
-          <p className="learning-body text-sm sm:text-base text-[#292524]">
+          <p className="learning-body text-base text-[#1C1917] leading-relaxed">
             근로기준법 제54조에 따른 휴게시간은 <strong>근로자가 사용자의 지휘·감독에서 완전히 벗어나 자유롭게 이용할 수 있는 시간</strong>이어야 합니다.
             비록 일을 하지 않고 앉아 대기하고 있더라도, 손님이 오면 바로 응대해야 하거나 사업장을 떠날 수 없다면 이는 휴게시간이 아니라 <strong>‘대기시간(근로시간)’</strong>에 해당합니다.
           </p>
-          <div className="editorial-meta text-xs text-[#57534E]">
+          <div className="editorial-meta text-xs sm:text-sm text-[#57534E]">
             법정 기준: 근로시간 4시간인 경우 30분 이상 / 8시간인 경우 1시간 이상의 휴게시간을 근로시간 도중에 주어야 합니다.
           </div>
         </div>
@@ -357,7 +357,7 @@ export const Issue03BeforeYouWork: React.FC<Issue03BeforeYouWorkProps> = ({
                       <Square className="w-4 h-4 text-[#A8A29E]" />
                     )}
                   </div>
-                  <span className="learning-body text-sm text-[#292524]">{check.text}</span>
+                  <span className="learning-choice text-sm sm:text-[15px] text-[#1C1917]">{check.text}</span>
                 </div>
               );
             })}

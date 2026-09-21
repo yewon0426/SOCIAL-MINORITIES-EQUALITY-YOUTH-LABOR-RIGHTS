@@ -38,11 +38,11 @@ export const Issue02Equality: React.FC<Issue02EqualityProps> = ({
           </span>
         </div>
 
-        <h2 className="editorial-heading text-xl sm:text-2xl text-[#1C1917]">
+        <h2 className="learning-subheading text-xl sm:text-2xl font-bold text-[#1C1917]">
           본 수업에서 이미 학습을 마친 개념입니다.
         </h2>
 
-        <div className="learning-body text-sm sm:text-base text-[#44403C] leading-relaxed space-y-3">
+        <div className="learning-body text-base sm:text-[17px] text-[#292524] leading-relaxed space-y-3">
           <p>
             ‘형식적 평등’과 ‘실질적 평등’의 기본 개념 및 비교는 교과 정규 수업에서 이미 다루었습니다.
           </p>

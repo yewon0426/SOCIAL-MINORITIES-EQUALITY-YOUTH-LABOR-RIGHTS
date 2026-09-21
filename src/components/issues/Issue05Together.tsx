@@ -93,15 +93,15 @@ export const Issue05Together: React.FC<Issue05TogetherProps> = ({
                   </span>
                   <span className="stamp-box px-1.5 py-0.5 text-[9px] editorial-meta">헌법상 기본권</span>
                 </div>
-                <h3 className="editorial-subheading text-2xl text-[#1C1917] mt-2">
+                <h3 className="card-title text-xl sm:text-2xl text-[#1C1917] mt-2">
                   {right.name}
                 </h3>
-                <p className="learning-body text-xs sm:text-sm text-[#44403C] mt-2">
+                <p className="card-body text-sm sm:text-[15px] text-[#292524] mt-2 leading-relaxed">
                   {right.definition}
                 </p>
               </div>
 
-              <div className="pt-3 border-t border-[#292524]/10 text-[11px] editorial-meta text-[#78716C]">
+              <div className="pt-3 border-t border-[#292524]/10 text-xs editorial-meta text-[#78716C]">
                 근거: {right.constitutionalBasis}
               </div>
             </div>
@@ -158,11 +158,11 @@ export const Issue05Together: React.FC<Issue05TogetherProps> = ({
 
                 {/* Feedback Note on selection */}
                 {currentMatch && (
-                  <div className="pt-2 border-t border-[#292524]/10 text-xs text-[#57534E] flex items-center gap-2 animate-in fade-in duration-200">
-                    <span className="editorial-meta text-[10px] text-[#881337] font-bold">
+                  <div className="pt-2 border-t border-[#292524]/10 text-xs sm:text-sm text-[#57534E] flex items-center gap-2 animate-in fade-in duration-200">
+                    <span className="editorial-meta text-xs text-[#881337] font-bold shrink-0">
                       [READ THE NOTE]
                     </span>
-                    <span className="card-body text-xs text-[#57534E]">{scene.feedback}</span>
+                    <span className="card-body text-sm sm:text-[15px] text-[#292524]">{scene.feedback}</span>
                   </div>
                 )}
               </div>
@@ -228,7 +228,7 @@ export const Issue05Together: React.FC<Issue05TogetherProps> = ({
                 completed: true,
               }));
             }}
-            className="learning-btn px-6 py-3 bg-[#1C1917] hover:bg-[#881337] text-white tracking-widest uppercase transition-all cursor-pointer"
+            className="learning-btn px-6 py-3 bg-[#1C1917] hover:bg-[#881337] text-white tracking-wider uppercase transition-all cursor-pointer"
           >
             {issue05State.revealedThinkConcept ? '헌법적 배경 확인 완료 ✓' : 'READ THE CONSTITUTIONAL INSIGHT (내 판단 확인하기) →'}
           </button>
@@ -240,7 +240,7 @@ export const Issue05Together: React.FC<Issue05TogetherProps> = ({
             <span className="editorial-label text-[#881337] block">
               EDITORIAL EXPLANATION : 헌법적 배경
             </span>
-            <p className="editorial-quote not-italic text-base sm:text-lg text-[#1C1917] leading-relaxed">
+            <p className="learning-body text-base sm:text-[17px] text-[#1C1917] leading-relaxed">
               “개별 근로자와 사용자 사이에는 <strong>경제적·사회적 힘의 차이(비대칭)</strong>가 필연적으로 존재할 수밖에 없습니다.
               혼자서는 계약 조건이 부당해도 일자리를 잃을까 두려워 항의하기 어렵습니다.
               따라서 헌법은 근로자들이 <strong>단결하여 집단의 힘으로 대등하게 협상</strong>할 수 있도록 단결권, 단체교섭권, 단체행동권을 부여하여, 실질적인 평등과 인간다운 생활을 보장하고자 하는 것입니다.”
