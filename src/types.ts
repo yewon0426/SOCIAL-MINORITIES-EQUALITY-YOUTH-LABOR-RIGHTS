@@ -10,16 +10,28 @@ export type IssueId =
   | 'my-edition';
 
 export interface Scene01State {
-  markedElements: string[]; // '숫자' | '사회적 불리함' | '차별 경험' | '권력 관계'
-  checkedConcept: boolean;
+  markedElements?: string[];
+  checkedConcept?: boolean;
   completed?: boolean;
+  // New minority activity fields
+  caseJudgments?: {
+    caseA?: 'minority' | 'difficult' | null;
+    caseB?: 'minority' | 'difficult' | null;
+    caseC?: 'minority' | 'difficult' | null;
+    caseD?: 'minority' | 'difficult' | null;
+  };
+  selectedCriteria?: string[];
+  hasSubmittedCriteria?: boolean;
 }
 
 export interface Scene02State {
-  markedPhrases: string[]; // '학생들은' | '책임감이 부족해서' | '원래' | '잘 안 뽑습니다'
-  studentThought: string;
+  markedPhrases?: string[];
+  studentThought?: string;
   checkedFeedback?: boolean;
   completed?: boolean;
+  // New application case fields
+  selectedScene02Option?: 'A' | 'B' | 'C' | null;
+  hasSubmittedScene02?: boolean;
 }
 
 export interface Issue02State {
